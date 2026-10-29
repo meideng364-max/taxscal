@@ -1,11 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <style>
+        .p1 {
+            color: skyblue;
+        }
+    </style>
 </head>
-<body>
+
+<body class="">
+    <div class="justify-content-center m-3 mb-5">
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-4 fixed-top">
+            <div class="container-fluid">
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                More
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                <li><a class="dropdown-item" href="nhif.html">NHIF</a></li>
+
+                                <li><a class="dropdown-item" href="pay.html">PAYEE</a></li>
+
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="card ms-5 mt-5 pt-5 p-3 mb-5 me-5 p-3 mb-2 rounded">
+        <div class="card-body">
+            <h4 class="p1 m-3">
+                This calculator helps you work out your take-home pay. Enter your basic salary and any benefits in
+                Kenyan shillings, then click Submit. The calculator adds the two together to get your <span
+                    style="color: rgb(243, 143, 143)">gross salary</span>, then
+                works out the statutory deductions: <span></span>NHIF</span> for health insurance, <span
+                    style="color: rgb(243, 143, 143);"> NSSF</span> for your pension contribution, and
+                <span style="color: rgb(243, 143, 143)">NHDF</span> for the housing levy. Each amount appears in the
+                results table below. These figures are estimates,
+                so confirm the current rates with <span style="color: rgb(243, 143, 143);">KRA</span> or your employer.
+            </h4>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="card shadow-lg p-4 ms-5 me-5 mb-5 rounded bg-info-subtle">
+        <div class="container">
+            <form class="container" id="form">
+                <div class="mb-3 container">
+                    <label for="exampleInputEmail1" class="form-label "><span style="color: skyblue;">Basic
+                            Salary</span></label>
+                    <input type="number" class="form-control" id="basic" placeholder="Enter Salary (KSH)"
+                        aria-describedby="emailHelp">
+
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label"><span
+                            style="color: skyblue;">Benefits</span></label>
+                    <input type="number" class="form-control d-flex justify-content-center" id="benefits"
+                        placeholder="Enter Benefits (KSH)">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Calculate</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container mt-5">
+        <table class="table w-100 table-info object-fit-cover" id="table">
+            <thead>
+                <tr>
+                    <th scope="col">CATEGORY</th>
+                    <th scope="col">RESULTS</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">GROSS SALARY</th>
+                    <th id="gross"></th>
+
+                </tr>
+                <tr>
+                    <th scope="row">NHIF</th>
+                    <th id="nhif"></th>
+
+                </tr>
+                <tr>
+                    <th scope="row">NSSF</th>
+                    <th id="nssf"></th>
+
+                </tr>
+                <tr>
+                    <th scope="row">NHDF</th>
+                    <th id="nhdf"></th>
+
+                </tr>
+                <tr>
+                    <th scope="row">TAXABLE INCOME</th>
+                    <th id="tax"></th>
+
+                </tr>
+                <tr>
+                    <th scope="row">PAYEE</th>
+                    <th id="payee"></th>
+
+                </tr>
+                <tr>
+                    <th scope="row">NET SALARY</th>
+                    <th id="net"></th>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 text-center">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <p class="text-light ">© MEI MEI 2026 ALL RIGHTS RESERVED</p>
+
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="tax.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
